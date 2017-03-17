@@ -1,0 +1,20 @@
+{
+    "name": "viktory/api-error-handler",
+    "description": "Customized Yii2 ErrorHandler handles uncaught PHP errors and exceptions.",
+    "type": "library",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Viktoriia Lysenko",
+            "email": "lysenkoviktory@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {"ApiErrorHandler\\": "src/"}
+    }
+}
