@@ -1,12 +1,19 @@
 <?php
-
-namespace app\components;
+/**
+ * ApiErrorHandlerException.php
+ * Created for ApiErrorHandler
+ * 2017-03-17
+ *
+ * @author: Viktoriia Lysenko <lysenkoviktory@gmail.com>
+ * @copyright 2017 Viktoriia Lysenko
+ */
+namespace ApiErrorHandler;
 
 use yii\web\Response;
 
 /**
  * Class ApiErrorHandler
- * @package app\components
+ * @package ApiErrorHandler
  */
 class ApiErrorHandler extends \yii\web\ErrorHandler
 {
@@ -50,13 +57,13 @@ class ApiErrorHandler extends \yii\web\ErrorHandler
 
     /**
      * @param \Exception $exception
-     * @throws \Exception
+     * @throws ApiErrorHandlerException
      */
     protected function logToFile($exception)
     {
         if ($this->filename !== null) {
             if (!is_readable($this->filename)) {
-                throw new \ApiErrorHandlerException('ApiErrorHandler could not open log file');
+                throw new ApiErrorHandlerException('ApiErrorHandler could not open log file');
             }
             $date = new \DateTime();
             $errorStr = $date->format('Y-m-d H:i:s') . ': ' . $exception->__toString() . PHP_EOL . PHP_EOL;

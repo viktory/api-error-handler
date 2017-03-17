@@ -8,6 +8,12 @@
  * @copyright 2017 Viktoriia Lysenko
  */
 
-class ApiErrorHandlerException extends Exception
+namespace ApiErrorHandler;
+
+/**
+ * Class ApiErrorHandlerException
+ * @package ApiErrorHandler
+ */
+class ApiErrorHandlerException extends \Exception
 {
 }
